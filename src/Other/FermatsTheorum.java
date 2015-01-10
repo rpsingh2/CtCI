@@ -1,0 +1,49 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/* Finding if a number is prime or not. */
+
+package Other;
+
+import java.util.Random;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Shubham
+ */
+public class FermatsTheorum {
+    
+    public void fermat(int n){
+        Random rand=new Random();
+        for(int i=1; i<5 ;i++){
+            int k=rand.nextInt(n-1) + 1;
+            System.out.println("k=" + k);
+            System.out.println("n=" + n);
+            int m=n-1;
+            long z= (int)(Math.pow(k, m));
+            System.out.println("z:" + z);
+            int x= (int) (z % n);
+            System.out.println("x=" + x);
+            if(x!=1){
+                System.out.println("This number is not prime");
+                return;
+            }
+        }
+        System.out.println("This number is prime");
+        return;
+    }
+    
+    
+    public static void main(String args[]){
+        FermatsTheorum f= new FermatsTheorum();
+        System.out.println("Enter Number to check if it is Prime:");
+        Scanner s= new Scanner(System.in);
+        int i=s.nextInt();
+        f.fermat(i);
+    }
+    
+}
