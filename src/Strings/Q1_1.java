@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Implement a program to find whether all alphabets in String are unique or not.
  */
 package Strings;
 
