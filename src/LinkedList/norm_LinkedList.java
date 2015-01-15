@@ -5,6 +5,7 @@
  */
 package LinkedList;
 
+import java.util.HashSet;
 import java.util.Scanner;
 
 /**
@@ -70,6 +71,33 @@ public class norm_LinkedList {
     }        
     }
     
+    public void delDupes(Node head1){
+        HashSet<Integer> h= new HashSet<Integer>();
+        Node current=null;
+        Node head=head1;
+        while(head!=null){
+            if(h.contains(head.a)){
+               
+                head.next=null;
+                head=current;
+            }else{
+                h.add(head.a);
+                current=head;
+            }
+            head=head.next;
+        }
+        
+        System.out.println(h);
+        
+        Node current1; 
+       current1=head1;
+        while(current1!=null){
+            System.out.println("Data present: " + current1.a);
+            current1=current1.next;
+        }
+    }
+    
+    
     
     public static void main(String args[]){
         
@@ -91,8 +119,8 @@ public class norm_LinkedList {
         int i= b.getNth(head,k);
         System.out.println("Data:" + i);
         
-        b.recursive_reverse(head);
-        
+    //    b.recursive_reverse(head);
+       b.delDupes(head);
        Node current; 
        current=head;
         while(current!=null){
