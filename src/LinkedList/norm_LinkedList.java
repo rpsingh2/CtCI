@@ -7,6 +7,7 @@ package LinkedList;
 
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Stack;
 
 /**
  *
@@ -97,7 +98,26 @@ public class norm_LinkedList {
         }
     }
     
-    
+   public boolean isPalindrome(Node head){
+       Node slow=head;
+       Node fast=head;
+       Stack<Integer> s=new Stack<Integer>();
+       while(fast!=null && fast.next!=null){
+           s.push(slow.a);
+           slow=slow.next;
+           fast=fast.next.next;
+       }
+       if(fast!=null)
+           slow=slow.next;
+       while(slow!=null){
+           int top=s.pop();
+           if(top!=slow.a)
+               return false;
+           slow=slow.next;
+       }
+       
+       return true;
+   } 
     
     public static void main(String args[]){
         
@@ -119,8 +139,10 @@ public class norm_LinkedList {
         int i= b.getNth(head,k);
         System.out.println("Data:" + i);
         
-    //    b.recursive_reverse(head);
-       b.delDupes(head);
+    //   b.recursive_reverse(head);
+    //   b.delDupes(head);
+       boolean m=b.isPalindrome(head);
+       System.out.println("The Linked list is a Palindrome: " + m);
        Node current; 
        current=head;
         while(current!=null){
