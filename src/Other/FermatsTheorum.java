@@ -20,11 +20,11 @@ public class FermatsTheorum {
     public void fermat(int n){
         Random rand=new Random();
         for(int i=1; i<5 ;i++){
-            int k=rand.nextInt(n-1) + 1;
+            int k=rand.nextInt(4) + 1;
             System.out.println("k=" + k);
             System.out.println("n=" + n);
             int m=n-1;
-            long z= (int)(Math.pow(k, m));
+            long z= (long)(Math.pow(k, m));
             System.out.println("z:" + z);
             int x= (int) (z % n);
             System.out.println("x=" + x);
