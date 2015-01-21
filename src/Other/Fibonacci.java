@@ -12,9 +12,9 @@ import java.util.Scanner;
  * @author Shubham
  */
 public class Fibonacci {
-    
+    static long[] ar=new long[50];
     public long fibDynamic(int n){
-        long[] ar=new long[50];
+        
         ar[0]=0;
         ar[1]=1;
         if(n==0){
@@ -42,5 +42,6 @@ public class Fibonacci {
         long end=System.nanoTime()-start;
         System.out.println("The number is:" + l);
         System.out.println("It took "+ end + " ns to finish the runtime.");
+       
     }
 }
