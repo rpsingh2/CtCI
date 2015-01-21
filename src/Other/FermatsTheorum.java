@@ -21,13 +21,9 @@ public class FermatsTheorum {
         Random rand=new Random();
         for(int i=1; i<5 ;i++){
             int k=rand.nextInt(4) + 1;
-            System.out.println("k=" + k);
-            System.out.println("n=" + n);
             int m=n-1;
             long z= (long)(Math.pow(k, m));
-            System.out.println("z:" + z);
             int x= (int) (z % n);
-            System.out.println("x=" + x);
             if(x!=1){
                 System.out.println("This number is not prime");
                 return;
