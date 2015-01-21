@@ -16,9 +16,9 @@ public class perm {
     public void permu(String[] s, int k, int n){
         String temp;
         if(k==n){
-            StringBuffer result = new StringBuffer();
-            for (int i = 0; i < s.length; i++) {
-             result.append( s[i] );
+            StringBuilder result = new StringBuilder();
+            for (String item : s) {
+                result.append(item);
             }
             String mynewstring = result.toString();
             count++;
