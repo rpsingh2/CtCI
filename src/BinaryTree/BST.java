@@ -117,9 +117,9 @@ public class BST {
     }
       public void postOrder(Node n){
         if(n!=null){
-          postOrder(n.rightChild);
-          
           postOrder(n.leftChild);
+          
+          postOrder(n.rightChild);
           System.out.println("PostOrder: Data now is:" + n.a);
           
         }
@@ -135,7 +135,7 @@ public class BST {
     
 // Maximum depth of the BST
     
-    public int maxDepth(Node root){
+    public static int maxDepth(Node root){
         if(root==null){
             return 0;
         }
@@ -150,6 +150,18 @@ public class BST {
         }
     }
     
+    // Calculating the diameter of the tree.
+    public static int diam(Node root){
+        if (root==null){
+            return 0;
+        }
+        int lDepth= maxDepth(root.leftChild);
+        int rDepth= maxDepth(root.rightChild);
+        int lDiam= diam(root.leftChild);
+        int rDiam= diam(root.rightChild);
+        
+        return(Math.max((lDepth+rDepth+1) , Math.max(lDiam,rDiam)));
+    }
     
     public void printPath(Node root, int path[], int pathLength){
         if(root==null){
@@ -199,13 +211,15 @@ public class BST {
         boolean search= b.search(root, a.nextInt());
         System.out.println(search);
         
-        int depth= b.maxDepth(root);
+        int depth= maxDepth(root);
         System.out.println("Maximum depth of the tree= " + depth);
         
         int path[]=new int[depth];
         int pathlength=0;
         b.printPath(root, path, pathlength);
         
+        int d= diam(root);
+        System.out.println("Maximum Diameter of the tree= " + d);
 
     }
 }
