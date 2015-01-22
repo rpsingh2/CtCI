@@ -3,6 +3,7 @@ Implement a program to find whether all alphabets in String are unique or not.
  */
 package Strings;
 
+import java.util.BitSet;
 import java.util.Scanner;
 
 /**
@@ -12,10 +13,16 @@ import java.util.Scanner;
 public class Q1_1 {
     public boolean isUnique(String str){
         int i,j=0;
-        for(i=0;i<str.length();i++)
-            for(j=i+1;j<str.length();j++)
-                if(str.charAt(i)==str.charAt(j))
-                    return false;
+        BitSet b = new BitSet();
+        for(i=0;i<str.length();i++){
+        int a= str.charAt(i);
+        if(b.get(a)== true)
+            return false;
+        else {
+                b.set(a);
+                }
+        }
+        System.out.println(b);
         return true;
     }
     

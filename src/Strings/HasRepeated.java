@@ -21,9 +21,10 @@ public class HasRepeated {
        char c = word.charAt(i);
        if (scoreboard.containsKey(c)) {
            scoreboard.put(c, true);
-        }  else { 
-         scoreboard.put(c, false);
-      } 
+        }  
+       else { 
+             scoreboard.put(c, false);
+            } 
     }
       System.out.println(scoreboard);
 for (int i = 0; i < word.length(); i++) { 
