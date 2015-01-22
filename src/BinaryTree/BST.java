@@ -29,7 +29,7 @@ public class BST {
             Node parent;
             while(true){
                 parent=current;
-                if(a<current.a){
+                if(a<=current.a){
                     current=current.leftChild;
                     if(current==null){
                         parent.leftChild=newNode;
@@ -101,11 +101,27 @@ public class BST {
     
 // Inorder Traversal of tree with node root    
     
-    public void DFS(Node n){
+    public void inOrder(Node n){
         if(n!=null){
-          DFS(n.leftChild);
-          System.out.println("Data now is:" + n.a);
-          DFS(n.rightChild);
+          inOrder(n.leftChild);
+          System.out.println("InOrder: Data now is:" + n.a);
+          inOrder(n.rightChild);
+        }
+    }
+     public void preOrder(Node n){
+        if(n!=null){
+          System.out.println("Preorder: Data now is:" + n.a);
+          preOrder(n.leftChild);
+          preOrder(n.rightChild);
+        }
+    }
+      public void postOrder(Node n){
+        if(n!=null){
+          postOrder(n.rightChild);
+          
+          postOrder(n.leftChild);
+          System.out.println("PostOrder: Data now is:" + n.a);
+          
         }
     }
     
@@ -124,12 +140,31 @@ public class BST {
             return 0;
         }
         else{
+            
             int lDepth= maxDepth(root.leftChild);
             int rDepth= maxDepth(root.rightChild);
             if(lDepth>rDepth)
                 return (lDepth + 1);
             else
                 return (rDepth + 1);
+        }
+    }
+    
+    
+    public void printPath(Node root, int path[], int pathLength){
+        if(root==null){
+            return;
+        }
+        path[pathLength++]=root.a;
+        if(root.leftChild==null && root.rightChild==null){
+            for(int i=0; i<pathLength;i++)
+                System.out.print(path[i] + "--");
+            System.out.println();
+        }
+        
+        else{
+            printPath(root.leftChild, path , pathLength);
+            printPath(root.rightChild, path , pathLength);
         }
     }
     
@@ -149,7 +184,9 @@ public class BST {
 
     }
         
-        b.DFS(root);
+        b.inOrder(root);
+        b.preOrder(root);
+        b.postOrder(root);
         
         int min= b.minValue(root);
         System.out.println("Minimum value of the tree:" + min);
@@ -164,6 +201,10 @@ public class BST {
         
         int depth= b.maxDepth(root);
         System.out.println("Maximum depth of the tree= " + depth);
+        
+        int path[]=new int[depth];
+        int pathlength=0;
+        b.printPath(root, path, pathlength);
         
 
     }
