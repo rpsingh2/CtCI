@@ -10,7 +10,7 @@ package Strings;
  *
  * @author Shubham
  */
-public class Other {
+public class StringtoArray {
     
     
     public static void main(String args[]){

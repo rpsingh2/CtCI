@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Shubham
  */
-public class Q1_1 {
+public class UniqueAlphabets {
     public boolean isUnique(String str){
         int i,j=0;
         BitSet b = new BitSet();
@@ -27,7 +27,7 @@ public class Q1_1 {
     }
     
     public static void main(String args[]){
-        Q1_1 q=new Q1_1();
+        UniqueAlphabets q=new UniqueAlphabets();
         System.out.println("Enter the String:");
         Scanner s= new Scanner(System.in);
         boolean result = q.isUnique(s.nextLine());

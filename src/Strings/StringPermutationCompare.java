@@ -10,7 +10,7 @@ package Strings;
  *
  * @author Shubham
  */
-public class Q1_3 {
+public class StringPermutationCompare {
     
     public Boolean stringPerm(String s1, String s2){
        return (s1.equals(s2));
@@ -25,7 +25,7 @@ public class Q1_3 {
     
     
      public static void main(String args[]){
-        Q1_3 q=new Q1_3();
+        StringPermutationCompare q=new StringPermutationCompare();
         System.out.println("Enter the String:");
         Scanner s= new Scanner(System.in);
         String s2=q.sort(s.nextLine());
