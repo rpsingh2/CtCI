@@ -21,8 +21,9 @@ public class ReverStr {
     public static void main(String args[]){
         System.out.println("Enter String to reverse:");
         Scanner s= new Scanner(System.in);
+        String str = s.nextLine();
         ReverStr r = new ReverStr();
-        String sol = r.recursStr(s.nextLine());
+        String sol = r.recursStr(str);
         System.out.println("Reversed string is:" + sol );
     }
 }
