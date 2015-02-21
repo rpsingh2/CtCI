@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Shubham
  */
-public class perm {
+public class StringPermutation {
   static int count=0; 
     public void permu(String[] s, int k, int n){
         String temp;
@@ -39,7 +39,7 @@ public class perm {
     }
     
     public static void main(String args[]){
-        perm p= new perm();
+        StringPermutation p= new StringPermutation();
         String[] s= new String[10];
         System.out.println("Enter the String :");
         Scanner s1=new Scanner(System.in);
