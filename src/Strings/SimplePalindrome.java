@@ -14,14 +14,17 @@ import java.util.Scanner;
 public class SimplePalindrome {
     
     public boolean isPalindrome(String str){
+        if(str.isEmpty())
+            return true;
         str=str.toLowerCase();
 	int n = str.length()-1;
 	int i = 0;
 	while(i<n){
-            while(!Character.isLetter(str.charAt(i))){
+            
+            while(!Character.isLetterOrDigit(str.charAt(i)) && i<n){
 		i++;
             }
-            while(!Character.isLetter(str.charAt(n))){
+            while(!Character.isLetterOrDigit(str.charAt(n))&& i<n){
 		n--;
             }
             if(str.charAt(i) != str.charAt(n)){

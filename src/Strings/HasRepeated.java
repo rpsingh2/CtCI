@@ -14,7 +14,6 @@ public class HasRepeated {
     
     
     public char firstNonRepeatedCharacter(String word) { 
-       
     HashMap<Character,Boolean> scoreboard = new HashMap<>();
       for (int i = 0; i < word.length(); i++) { 
        char c = word.charAt(i);
