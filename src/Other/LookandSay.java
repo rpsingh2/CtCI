@@ -5,7 +5,6 @@
  */
 package Other;
 
-import static Strings.AnagramPalindrome.palin;
 import java.util.Scanner;
 
 /**
@@ -20,7 +19,8 @@ public class LookandSay {
         StringBuilder sb = new StringBuilder();
         char repeat = num.charAt(0);
         int time=1;
-        num= num.substring(1)+ " ";
+        num= num.substring(1) + " ";
+    //    System.out.println(num);
         for(char c:num.toCharArray()){
             if(c != repeat){
                 sb.append(time);

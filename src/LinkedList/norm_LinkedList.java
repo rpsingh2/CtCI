@@ -51,6 +51,22 @@ public class norm_LinkedList {
         first.next=null;
         head=rest;
     }
+    
+    public void iterative_reverse(Node head)
+{
+	Node previous = null;
+	Node current = head;
+	Node next_node = current.next;
+	
+	while(current.next!=null)
+	{
+		current.next = previous;
+		previous = current;
+		current = next_node;
+		next_node = current.next;
+	}
+	head = current;
+}
  
     // Get the Nth Node from the linked list
     public int getNth(Node head, int n){
