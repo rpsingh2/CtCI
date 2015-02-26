@@ -94,14 +94,16 @@ public class norm_LinkedList {
         Node head=head1;
         while(head!=null){
             if(h.contains(head.a)){
-               
-                head.next=null;
-                head=current;
+                current.next=head.next;
+                Node prev=head;
+                head=head.next;
+                prev.next=null;
+            //    head=current;
             }else{
                 h.add(head.a);
                 current=head;
-            }
-            head=head.next;
+                head=head.next;
+            }     
         }
         
         System.out.println(h);
@@ -155,8 +157,8 @@ public class norm_LinkedList {
         int i= b.getNth(head,k);
         System.out.println("Data:" + i);
         
-    //   b.recursive_reverse(head);
-    //   b.delDupes(head);
+       b.recursive_reverse(head);
+       b.delDupes(head);
        boolean m=b.isPalindrome(head);
        System.out.println("The Linked list is a Palindrome: " + m);
        Node current; 
