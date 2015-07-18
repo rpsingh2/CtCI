@@ -19,7 +19,7 @@ public class BitSetExample {
         for(int num:a){
             b.set(num);
         }
-        
+        System.out.println(b);
         System.out.println("Bitset for Array"  + " is" + b.nextClearBit(9));
     }
 }

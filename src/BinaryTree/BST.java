@@ -180,6 +180,17 @@ public class BST {
         }
     }
     
+    
+    public boolean pathSum(Node root, int sum){
+        if(root==null){
+            return(sum==0);
+        }
+        else{
+            int subsum=sum-root.a;
+            return(pathSum(root.leftChild,subsum) || pathSum(root.rightChild,subsum));
+        }
+    }
+    
 // Main Method
     public static void main(String args[]){
         BST b=new BST();
