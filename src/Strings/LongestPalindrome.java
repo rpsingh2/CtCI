@@ -18,10 +18,25 @@ class LongestPalindrome {
      * @return The longest palindrome found in the given input.
      */
     public static String getLongestPalindrome(final String input) {
-        int rightIndex = 0, leftIndex = 0;
-        String currentPalindrome = "", longestPalindrome = "";
-        for (int centerIndex = 1; centerIndex < input.length() - 1; centerIndex++) {
+        int rightIndex, leftIndex;
+        String currentPalindrome, longestPalindrome = "";
+        if(input.length()==1){
+            return input;
+        }
+        if(input.length()==2){
+            if(input.charAt(0)==input.charAt(1))
+                return input;
+            else
+                return "";
+        }
+        for (int centerIndex = 2; centerIndex < input.length() - 1; centerIndex++) {
+            if(input.charAt(centerIndex)==input.charAt(centerIndex-1) && input.charAt(centerIndex)!= input.charAt(centerIndex+1) ){
+                leftIndex=centerIndex - 2;
+                rightIndex = centerIndex + 1;                        
+            }
+            else{
             leftIndex = centerIndex - 1;  rightIndex = centerIndex + 1;
+            }
             while (leftIndex >= 0 && rightIndex < input.length()) {
                 if (input.charAt(leftIndex) != input.charAt(rightIndex)) {
                     break;
