@@ -40,7 +40,7 @@ public class StringPermutation {
     
     public static void main(String args[]){
         StringPermutation p= new StringPermutation();
-        String[] s= new String[10];
+        String[] s;
         System.out.println("Enter the String :");
         Scanner s1=new Scanner(System.in);
         s = s1.nextLine().split("");

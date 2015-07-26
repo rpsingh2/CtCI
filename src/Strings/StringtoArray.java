@@ -1,5 +1,6 @@
 package Strings;
 import java.util.Arrays;
+import java.util.BitSet;
 import java.util.Scanner;
 
 /*
@@ -19,11 +20,11 @@ public class StringtoArray {
         String s=s1.nextLine();
         
         char[] c= s.toCharArray();
-        int[] c1= new int[256];
+        BitSet c1= new BitSet();
         int i;
         for(char c2:c){
-            c1[c2]++;  
+            c1.set(c2);
         }
-        System.out.println("String in array form:" + Arrays.toString(c1));
+        System.out.println("String in array form:" + c1);
     }
 }
