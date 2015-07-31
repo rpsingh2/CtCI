@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class UniqueAlphabets {
     public boolean isUnique(String str){
-        int i,j=0;
+        int i;
         BitSet b = new BitSet();
         for(i=0;i<str.length();i++){
         int a= str.charAt(i) - 'a';

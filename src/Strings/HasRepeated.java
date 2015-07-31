@@ -1,5 +1,5 @@
 /*
-First non repeated character in the string
+First repeated character in the string
  */
 package Strings;
 
@@ -13,33 +13,23 @@ import java.util.Scanner;
 public class HasRepeated {
     
     
-    public char firstNonRepeatedCharacter(String word) { 
-    HashMap<Character,Boolean> scoreboard = new HashMap<>();
-      for (int i = 0; i < word.length(); i++) { 
-       char c = word.charAt(i);
-       if (scoreboard.containsKey(c)) {
-           scoreboard.put(c, true);
-        }  
-       else
-            scoreboard.put(c, false);
-           
+    public char hasRepeated(String word) { 
+    HashMap<Character, Boolean> h = new HashMap<>();
+    for(int i=0; i<word.length();i++){
+        if(h.containsKey(word.charAt(i))){
+            return word.charAt(i);
+        }
+        else{
+            h.put(word.charAt(i), true);
+        }
     }
-      System.out.println(scoreboard);
-for (int i = 0; i < word.length(); i++) { 
-    
-    char c = word.charAt(i);
-    if (scoreboard.get(c) == false)
-    { return c; } 
-}
-
-    throw new RuntimeException("Undefined behaviour"); 
-    } 
-
+    return 0;
+    }
     public static void main(String args[]){
         System.out.println("Enter String to check for Repeated characters:");
         Scanner s= new Scanner(System.in);
         HasRepeated h=new HasRepeated();
-        char l= h.firstNonRepeatedCharacter(s.nextLine());
+        char l= h.hasRepeated(s.nextLine());
         System.out.println(" First Non Repeated char is:" + l);
     }
 }
