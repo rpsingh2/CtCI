@@ -51,8 +51,7 @@ public class StockMarket {
         int[] profit = new int[prices.length];
         for(int i=1;i<prices.length;i++){
             profit[i] = prices[i]-prices[i-1];
-        }
-        java.util.Arrays.sor
+        }   
         int local_sum=0;
         int global_sum=0;
 
