@@ -5,7 +5,6 @@
  */
 package saurabhschool.recursion;
 
-import static BinaryTree.BST.root;
 import java.util.Scanner;
 
 /**

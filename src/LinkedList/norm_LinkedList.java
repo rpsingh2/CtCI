@@ -6,6 +6,7 @@
 package LinkedList;
 
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -33,7 +34,7 @@ public class norm_LinkedList {
             System.out.println("Data added:" + a);
         }
     }
-    
+
     public void recursive_reverse(Node head){
         
         Node first;
@@ -136,7 +137,22 @@ public class norm_LinkedList {
        
        return true;
    } 
-    
+    public static Node rev(Node head){
+        if(head==null)
+            return null;
+        if(head.next==null){
+            return head;
+        }
+        Node parent=head;
+        Node child=head.next;
+        while(child!=null){
+            parent.next=child.next;
+            child.next=head;
+            head=child;
+            child=parent.next;     
+        }
+        return head;
+    }
     public static void main(String args[]){
         
         norm_LinkedList b=new norm_LinkedList();
@@ -150,8 +166,8 @@ public class norm_LinkedList {
             Scanner s1= new Scanner(System.in);
             b.create(s1.nextInt());
     }
-    
-        System.out.println("Please Enter index to find the data:");
+ //       head=rev(head);
+       System.out.println("Please Enter index to find the data:");
         Scanner s1= new Scanner(System.in);
         k=s1.nextInt();
         int i= b.getNth(head,k);
@@ -161,12 +177,14 @@ public class norm_LinkedList {
        b.delDupes(head);
        boolean m=b.isPalindrome(head);
        System.out.println("The Linked list is a Palindrome: " + m);
+        
        Node current; 
        current=head;
         while(current!=null){
             System.out.println("Data present: " + current.a);
             current=current.next;
         }
+         
         
     }
     

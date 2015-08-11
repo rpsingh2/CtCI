@@ -17,11 +17,8 @@ public class StringCompression {
           int count =1;
           String ans="";
           for(int i=1;i<str.length();i++){
-              if(str.charAt(i)== last){
-                  count+=1;
-              }
-              else{
-                  ans= ans + last + count; 
+              if(true){
+                
                   last=str.charAt(i);
                   count=1;
               }

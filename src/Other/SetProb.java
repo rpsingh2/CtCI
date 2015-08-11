@@ -28,7 +28,7 @@ public class SetProb {
     s2.add("tom");
     s2.add("jerry");
     s2.add("gilly");
-    
+
     for(String i:s1){
         for(String j:s2){
          ans= new HashSet<String>();

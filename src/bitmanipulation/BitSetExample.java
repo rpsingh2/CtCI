@@ -20,6 +20,6 @@ public class BitSetExample {
             b.set(num);
         }
         System.out.println(b);
-        System.out.println("Bitset for Array"  + " is" + b.nextClearBit(9));
+        System.out.println("Bitset for Array"  + " is" + b.nextClearBit(1));
     }
 }
