@@ -117,8 +117,7 @@ public class BST {
     }
       public void postOrder(Node n){
         if(n!=null){
-          postOrder(n.leftChild);
-          
+          postOrder(n.leftChild);          
           postOrder(n.rightChild);
           System.out.println("PostOrder: Data now is:" + n.a);
           

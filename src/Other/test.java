@@ -5,33 +5,46 @@
  */
 package Other;
 
-import java.util.BitSet;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
-import java.util.Set;
+
 
 /**
  *
  * @author Shubham
  */
 public class test {
+    public static String rev(String str){
+        int i,j;
+        StringBuilder st=new StringBuilder(str);
+        
+        j=str.length()-1;
+        for(i=0;i<=j;i++){
+            char temp;
+            temp=str.charAt(i);
+            st.setCharAt(i, str.charAt(j));
+            st.setCharAt(j, temp); 
+            j--;    
+        }
+        return st.toString();
+    }
     public static void main(String args[]){
-        LinkedList<Integer> l = new LinkedList<Integer>();
-        LinkedList<Integer> m = new LinkedList<Integer>();
-        LinkedList<Integer> n = new LinkedList<Integer>();
-        Queue<Integer> q = new Queue.;
-        Set b = new HashSet();
-        l.add(5);
-        l.add(6);
-        l.add(0);
-        m.add(5);
-        m.add(6);
-        m.add(0);
-        m.add(9);
-        
-        
-        System.out.println(l);
+        String ex = "I am   12 +12#@1           Freaking awesome";
+        //Program to reverse the String
+        String ans=rev(ex);
+        //Progtam to reverse words in sentence.
+        System.out.println(ans);
+        int i=0;
+        String s="";
+        for(int j=0; j<ans.length();){
+        while(!Character.isLetterOrDigit(ans.charAt(j)) && j<ans.length()){
+            s= s+ans.charAt(j);
+            j++;i++;
+        }
+        while(i<ans.length() && Character.isLetterOrDigit(ans.charAt(i))){
+            i++;
+        }
+        s= s+rev(ans.substring(j,i));
+        j=i;
+        }
+        System.out.println(s);
     }
 }
