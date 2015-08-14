@@ -11,7 +11,7 @@ package Other;
  *
  * @author Shubham
  */
-public class test {
+public class RevSentence {
     public static String rev(String str){
         int i,j;
         StringBuilder st=new StringBuilder(str);

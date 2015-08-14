@@ -130,11 +130,13 @@ public class norm_LinkedList {
            slow=slow.next;
        while(slow!=null){
            int top=s.pop();
-           if(top!=slow.a)
+           if(top!=slow.a){
+               System.out.println(head.a);
                return false;
+           }
            slow=slow.next;
        }
-       
+       System.out.println(head.a);
        return true;
    } 
     public static Node rev(Node head){
@@ -167,14 +169,14 @@ public class norm_LinkedList {
             b.create(s1.nextInt());
     }
  //       head=rev(head);
-       System.out.println("Please Enter index to find the data:");
-        Scanner s1= new Scanner(System.in);
-        k=s1.nextInt();
-        int i= b.getNth(head,k);
-        System.out.println("Data:" + i);
+//       System.out.println("Please Enter index to find the data:");
+//        Scanner s1= new Scanner(System.in);
+//        k=s1.nextInt();
+//        int i= b.getNth(head,k);
+//        System.out.println("Data:" + i);
         
-       b.recursive_reverse(head);
-       b.delDupes(head);
+//       b.recursive_reverse(head);
+//       b.delDupes(head);
        boolean m=b.isPalindrome(head);
        System.out.println("The Linked list is a Palindrome: " + m);
         

@@ -21,6 +21,7 @@ public class HasRepeated {
         }
         else{
             h.put(word.charAt(i), true);
+           
         }
     }
     return 0;
