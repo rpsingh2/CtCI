@@ -11,7 +11,7 @@ package Other;
  *
  * @author Shubham
  */
-public class test {
+public class RevSentence {
     public static String rev(String str){
         int i,j;
         StringBuilder st=new StringBuilder(str);
@@ -27,7 +27,7 @@ public class test {
         return st.toString();
     }
     public static void main(String args[]){
-        String ex = "I am   12 +12#@1           Freaking awesome";
+        String ex = "Hello there Children";
         //Program to reverse the String
         String ans=rev(ex);
         //Progtam to reverse words in sentence.

@@ -53,9 +53,11 @@ public class norm_LinkedList {
         head=rest;
     }
     
-    public void iterative_reverse(Node head)
+    public Node iterative_reverse(Node head)
 {
-	Node previous = null;
+    if(head==null)
+        return null;
+    Node previous = null;
 	Node current = head;
 	Node next_node = current.next;
 	
@@ -64,9 +66,17 @@ public class norm_LinkedList {
 		current.next = previous;
 		previous = current;
 		current = next_node;
+                if(current.next == null){
+                    break;
+                }
+                else
 		next_node = current.next;
 	}
+        current.next = previous;
+        previous = current;
+	current = next_node;
 	head = current;
+        return head;
 }
  
     // Get the Nth Node from the linked list
@@ -130,11 +140,13 @@ public class norm_LinkedList {
            slow=slow.next;
        while(slow!=null){
            int top=s.pop();
-           if(top!=slow.a)
+           if(top!=slow.a){
+               System.out.println(head.a);
                return false;
+           }
            slow=slow.next;
        }
-       
+       System.out.println(head.a);
        return true;
    } 
     public static Node rev(Node head){
@@ -153,6 +165,47 @@ public class norm_LinkedList {
         }
         return head;
     }
+    
+    public static Node insert(Node head,int data) {
+// This is a "method-only" submission. 
+// You only need to complete this method. 
+  Node newNode=new Node();
+  newNode.a=data;
+  if(head==null){
+      head=newNode;
+      return head;
+  }
+  Node current=head;
+  while(current.next!=null){
+      current=current.next;
+  }
+  current.next=newNode;
+  return head;
+}
+    
+    public static Node delete(Node head, int position) {
+  // Complete this method
+    if(head==null)
+        return null;
+    if(position==0)
+        return null;
+    Node current=head;
+    while(position!=1){
+        if(current.next==null){
+            return head;
+        }
+        current=current.next;
+        position--;
+    }
+    if(current.next==null){
+            return head;
+    }
+    Node temp=current.next;
+    current.next=current.next.next;
+    temp=null;
+    return head;
+}
+
     public static void main(String args[]){
         
         norm_LinkedList b=new norm_LinkedList();
@@ -166,17 +219,18 @@ public class norm_LinkedList {
             Scanner s1= new Scanner(System.in);
             b.create(s1.nextInt());
     }
- //       head=rev(head);
-       System.out.println("Please Enter index to find the data:");
-        Scanner s1= new Scanner(System.in);
-        k=s1.nextInt();
-        int i= b.getNth(head,k);
-        System.out.println("Data:" + i);
         
-       b.recursive_reverse(head);
-       b.delDupes(head);
-       boolean m=b.isPalindrome(head);
-       System.out.println("The Linked list is a Palindrome: " + m);
+ //       head=rev(head);
+//       System.out.println("Please Enter index to find the data:");
+//        Scanner s1= new Scanner(System.in);
+//        k=s1.nextInt();
+//        int i= b.getNth(head,k);
+//        System.out.println("Data:" + i);
+        
+       head=b.iterative_reverse(head);
+//       b.delDupes(head);
+//       boolean m=b.isPalindrome(head);
+//       System.out.println("The Linked list is a Palindrome: " + m);
         
        Node current; 
        current=head;
