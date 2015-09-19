@@ -5,6 +5,9 @@
  */
 package DP;
 
+import static Arrays.MaxSum.sumMaximum;
+import java.util.Scanner;
+
 /**
  *
  * 
@@ -45,22 +48,32 @@ package DP;
  * @author Shubham
  */
 public class StockMarket {
-    
-    public class Solution {
-    public int maxProfit(int k, int[] prices) {
-        int[] profit = new int[prices.length];
-        for(int i=1;i<prices.length;i++){
+    public static int maxProfit(int k, int[] prices) {
+        int[] profit = new int[k];
+        for(int i=1;i<k;i++){
             profit[i] = prices[i]-prices[i-1];
         }   
         int local_sum=0;
         int global_sum=0;
-
+        
         for(int j=0;j<profit.length;j++){
             
-            local_sum=Math.max((global_sum + profit[j]),0);
+            local_sum=Math.max((local_sum + profit[j]),0);
             global_sum= Math.max(local_sum,global_sum);
         }
         return global_sum;
     }
-}
+    public static void main(String args[]){
+        System.out.println("Enter the size of integer Array: ");
+        Scanner s = new Scanner(System.in);
+        int size = s.nextInt();
+        System.out.println("Enter the Array: ");
+        s = new Scanner(System.in);        
+        int[] arr= new int[size];
+        for(int i=0; i<size;i++){
+            arr[i] = s.nextInt();
+        }
+        int sum = maxProfit(size, arr);
+        System.out.println("Sum of the array elements: " + sum);
+    }
 }

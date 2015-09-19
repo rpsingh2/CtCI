@@ -27,7 +27,7 @@ public class RevSentence {
         return st.toString();
     }
     public static void main(String args[]){
-        String ex = "I am   12 +12#@1           Freaking awesome";
+        String ex = "Hello there Children";
         //Program to reverse the String
         String ans=rev(ex);
         //Progtam to reverse words in sentence.

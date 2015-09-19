@@ -12,7 +12,9 @@ package LinkedList;
 public class Node {
     int a;
     Node next;
-
+    Node(){
+        this.next=null;
+    }
     Node(int a){
         this.a=a;
         this.next=null;
