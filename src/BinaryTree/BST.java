@@ -124,14 +124,6 @@ public class BST {
         }
     }
     
- /*   public void BFS(Node n){
-        if(n!=null){
-          System.out.println("Data now is:" + n.a);
-          BFS(n.leftChild);
-          BFS(n.rightChild);
-        }
-    }*/
-    
 // Maximum depth of the BST
     
     public static int maxDepth(Node root){

@@ -16,9 +16,7 @@ public class isPowerOf2 {
         if(number <=0){
             return false;
         }
-        if((number & -number) == number)
-            return true;
-        else return false;
+        return (number & -number) == number;
     }
     public static void main(String args[]){
         isPowerOf2 i = new isPowerOf2();
