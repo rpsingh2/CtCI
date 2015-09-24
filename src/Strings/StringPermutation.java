@@ -20,9 +20,8 @@ public class StringPermutation {
             for (String item : s) {
                 result.append(item);
             }
-            String mynewstring = result.toString();
             count++;
-            System.out.println(mynewstring); 
+            System.out.println(result.toString()); 
         }
         
         else{
