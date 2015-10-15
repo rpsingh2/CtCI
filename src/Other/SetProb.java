@@ -28,13 +28,15 @@ public class SetProb {
     s2.add("tom");
     s2.add("jerry");
     s2.add("gilly");
-
+    int cost=0;
+    cost += 2;
     for(String i:s1){
         for(String j:s2){
          ans= new HashSet<String>();
          ans.add(i);
          ans.add(j);
          s3.add(ans);
+         Math. 
         }
     }
         System.out.println(s3);

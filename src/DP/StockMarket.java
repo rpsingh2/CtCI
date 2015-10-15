@@ -64,16 +64,17 @@ public class StockMarket {
         return global_sum;
     }
     public static void main(String args[]){
-        System.out.println("Enter the size of integer Array: ");
         Scanner s = new Scanner(System.in);
+        int length = s.nextInt();
+        for(int j=0;j<length;j++){
         int size = s.nextInt();
-        System.out.println("Enter the Array: ");
         s = new Scanner(System.in);        
         int[] arr= new int[size];
         for(int i=0; i<size;i++){
             arr[i] = s.nextInt();
         }
         int sum = maxProfit(size, arr);
-        System.out.println("Sum of the array elements: " + sum);
+        System.out.println(sum);
+        }
     }
 }

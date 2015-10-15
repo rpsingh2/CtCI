@@ -3,53 +3,56 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/X-Factor/Examples/src/Queue/Queue_BFS.java</file>
-            <file>file:/D:/X-Factor/Examples/src/Strings/AnagramPalindrome.java</file>
-            <file>file:/D:/X-Factor/Examples/src/DP/MaxNumberA.java</file>
-            <file>file:/D:/X-Factor/Examples/src/Other/StackEx.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Other/Solution.java</file>
             <file>file:/D:/X-Factor/Examples/src/Other/Fibonacci.java</file>
-            <file>file:/D:/X-Factor/Examples/src/Strings/StringPermutation.java</file>
-            <file>file:/D:/X-Factor/Examples/src/Queue/QueueRemove.java</file>
             <file>file:/D:/X-Factor/Examples/src/Other/AdjacencyList.java</file>
-            <file>file:/D:/X-Factor/Examples/src/Strings/HasRepeated.java</file>
-            <file>file:/D:/X-Factor/Examples/src/Arrays/MaxSum.java</file>
             <file>file:/D:/X-Factor/Examples/src/bitmanipulation/Example.java</file>
-            <file>file:/D:/X-Factor/Examples/src/DP/StockMarket.java</file>
-            <file>file:/D:/X-Factor/Examples/src/Strings/StringCompression.java</file>
-            <file>file:/D:/X-Factor/Examples/src/LinkedList/Node.java</file>
             <file>file:/D:/X-Factor/Examples/src/Strings/LongestPalindrome.java</file>
-            <file>file:/D:/X-Factor/Examples/src/Queue/Priority_Queue.java</file>
-            <file>file:/D:/X-Factor/Examples/src/Other/ThreeNumberSum.java</file>
-            <file>file:/D:/X-Factor/Examples/src/BinaryTree/Node.java</file>
             <file>file:/D:/X-Factor/Examples/src/Other/BubbleSort.java</file>
-            <file>file:/D:/X-Factor/Examples/src/Other/BinarySearch.java</file>
             <file>file:/D:/X-Factor/Examples/src/Other/HashMapMaxVal.java</file>
-            <file>file:/D:/X-Factor/Examples/src/saurabhschool/recursion/sumOfDigits.java</file>
-            <file>file:/D:/X-Factor/Examples/src/Strings/StringtoArray.java</file>
             <file>file:/D:/X-Factor/Examples/src/DP/MaxSubsequence.java</file>
-            <file>file:/D:/X-Factor/Examples/src/Other/RevSentence.java</file>
             <file>file:/D:/X-Factor/Examples/src/Other/SetProb.java</file>
             <file>file:/D:/X-Factor/Examples/src/saurabhschool/recursion/SearchBST.java</file>
             <file>file:/D:/X-Factor/Examples/src/bitmanipulation/BitSetExample.java</file>
-            <file>file:/D:/X-Factor/Examples/src/bitmanipulation/isPowerOf2.java</file>
-            <file>file:/D:/X-Factor/Examples/src/Strings/StringPermutationCompare.java</file>
-            <file>file:/D:/X-Factor/Examples/src/BinaryTree/BST.java</file>
+            <file>file:/D:/X-Factor/Examples/src/DP/CoinChange.java</file>
             <file>file:/D:/X-Factor/Examples/src/Other/JosephusProblem.java</file>
             <file>file:/D:/X-Factor/Examples/src/DP/MinCost.java</file>
             <file>file:/D:/X-Factor/Examples/src/Other/NumberGame.java</file>
             <file>file:/D:/X-Factor/Examples/src/LinkedList/norm_LinkedList.java</file>
             <file>file:/D:/X-Factor/Examples/src/saurabhschool/recursion/printArrayRev.java</file>
-            <file>file:/D:/X-Factor/Examples/src/Strings/UniqueAlphabets.java</file>
             <file>file:/D:/X-Factor/Examples/src/saurabhschool/recursion/printArray.java</file>
             <file>file:/D:/X-Factor/Examples/src/Strings/StringReverse.java</file>
+            <file>file:/D:/X-Factor/Examples/src/LinkedList/Coll_LinkedList.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Queue/Queue_BFS.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Strings/AnagramPalindrome.java</file>
+            <file>file:/D:/X-Factor/Examples/src/DP/MaxNumberA.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Other/StackEx.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Strings/StringPermutation.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Queue/QueueRemove.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Strings/HasRepeated.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Arrays/MaxSum.java</file>
+            <file>file:/D:/X-Factor/Examples/src/DP/StockMarket.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Strings/StringCompression.java</file>
+            <file>file:/D:/X-Factor/Examples/src/LinkedList/Node.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Queue/Priority_Queue.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Other/ThreeNumberSum.java</file>
+            <file>file:/D:/X-Factor/Examples/src/BinaryTree/Node.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Other/BinarySearch.java</file>
+            <file>file:/D:/X-Factor/Examples/src/saurabhschool/recursion/sumOfDigits.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Strings/StringtoArray.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Other/RevSentence.java</file>
+            <file>file:/D:/X-Factor/Examples/src/bitmanipulation/isPowerOf2.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Strings/StringPermutationCompare.java</file>
+            <file>file:/D:/X-Factor/Examples/src/BinaryTree/BST.java</file>
+            <file>file:/D:/X-Factor/Examples/src/Strings/UniqueAlphabets.java</file>
             <file>file:/D:/X-Factor/Examples/src/Strings/ReverStr.java</file>
             <file>file:/D:/X-Factor/Examples/src/Other/BookPage.java</file>
             <file>file:/D:/X-Factor/Examples/src/Other/FermatsTheorum.java</file>
             <file>file:/D:/X-Factor/Examples/src/saurabhschool/recursion/powerN.java</file>
+            <file>file:/D:/X-Factor/Examples/src/DP/NumberOfSteps.java</file>
             <file>file:/D:/X-Factor/Examples/src/Strings/SimplePalindrome.java</file>
             <file>file:/D:/X-Factor/Examples/src/saurabhschool/recursion/sumN.java</file>
             <file>file:/D:/X-Factor/Examples/src/DP/EggProblem.java</file>
-            <file>file:/D:/X-Factor/Examples/src/LinkedList/Coll_LinkedList.java</file>
             <file>file:/D:/X-Factor/Examples/src/Other/LookandSay.java</file>
         </group>
     </open-files>
