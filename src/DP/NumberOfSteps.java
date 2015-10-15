@@ -1,3 +1,9 @@
+
+
+
+
+
+
 /*
 *Given a distance ‘dist, count total number of ways to cover the distance with 1, 2 and 3 steps.
  */
