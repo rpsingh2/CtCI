@@ -6,14 +6,14 @@ import java.math.*;
 import java.util.regex.*;
 
 public class CoinChange {
-    public static int coin_change(int n, int m, int[] coins){
+    public static long coin_change(int n, int m, int[] coins){
         if(n<1){
             return 0;
         }
         if(m<1){
             return 0;
         }
-        int[] temp = new int[n+1];
+        long[] temp = new long[n+1];
         temp[0]=1;
         for(int i=0;i<m;i++){
             for(int j=coins[i];j<=n;j++){
@@ -31,7 +31,7 @@ public class CoinChange {
         for(int i=0;i<m;i++){
             coins[i]=s.nextInt();
         }
-        int out = coin_change(n,m,coins);
+        long out = coin_change(n,m,coins);
         System.out.println(out);
     }
 }
