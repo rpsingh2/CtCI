@@ -17,12 +17,14 @@ public class LCS {
         if(n==0 || m==0)
             return 0;
         int[][] store = new int[n+1][m+1];
-        
+        System.out.println("-------------------------------------------");
+        System.out.println("STRING AND SIZE OF THAT STRING IS:::");
+        System.out.println();
         for(int j=0;j<=m;j++)
             store[0][j]=0;
         for(int i=0;i<=n;i++)
             store[i][0]=0;
-        
+        StringBuilder sb = new StringBuilder();
         for(int i=1;i<=n;i++)
             for(int j=1;j<=m;j++){
                 if(s1.charAt(i-1) == s2.charAt(j-1)){
@@ -32,6 +34,28 @@ public class LCS {
                     store[i][j] = Math.max(store[i-1][j], store[i][j-1]);
                 }
             }
+
+        int i = n;
+        int j = m;
+        while(j>=1 && i>=1){
+                if(store[i][j] <= store[i][j-1]){
+                    j=j-1;
+                }
+                else if(store[i][j] <= store[i-1][j]){
+                    i=i-1;
+                }
+                else if(store[i][j] == store[i-1][j-1] + 1){
+                    sb.append(s1.charAt(i-1));
+                    i--;j--;
+                    
+                }
+
+            }
+        
+        sb.reverse();
+        System.out.println(sb.toString());
+        System.out.println();
+       
         return store[n][m];
     }
     
