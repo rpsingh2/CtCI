@@ -128,16 +128,10 @@ public class BST {
             return 0;
         }
         else{
-            
-            int lDepth= maxDepth(root.leftChild);
-            int rDepth= maxDepth(root.rightChild);
-            if(lDepth>rDepth)
-                return (lDepth + 1);
-            else
-                return (rDepth + 1);
+            return(1+ Math.max(maxDepth(root.leftChild), maxDepth(root.rightChild)));
         }
     }
-    
+        
     // Calculating the diameter of the tree.
     public static int diam(Node root){
         if (root==null){
