@@ -5,6 +5,8 @@
  */
 package Other;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -17,6 +19,8 @@ public class StackEx {
         System.out.println("Enter String to check");
         Scanner s1= new Scanner(System.in);
         Stack s = new Stack(); 
+        Queue q = new LinkedList();
+        q.isEmpty()
         String input = s1.nextLine();
         int length=input.length();
         for(int i=0;i<length;i++){

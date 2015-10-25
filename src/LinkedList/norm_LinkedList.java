@@ -35,22 +35,19 @@ public class norm_LinkedList {
         }
     }
 
-    public void recursive_reverse(Node head){
+    public static void recursive_reverse(Node temp){
+        if(temp==null)
+            return;
+        if(temp.next==null)
+        {
+            head = temp ;
+            return;
+        }
         
-        Node first;
-        Node rest;
-        if(head==null){
-            return;
-        }
-        first=head;
-        rest=first.next;
-        if(rest==null){
-            return;
-        }
-        recursive_reverse(rest);
-        first.next.next=first;
-        first.next=null;
-        head=rest;
+        recursive_reverse(temp.next);
+        temp.next.next = temp;
+        temp.next = null;
+       
     }
     
     public Node iterative_reverse(Node head)
@@ -219,15 +216,15 @@ public class norm_LinkedList {
             Scanner s1= new Scanner(System.in);
             b.create(s1.nextInt());
     }
-        
+           recursive_reverse(head);
  //       head=rev(head);
 //       System.out.println("Please Enter index to find the data:");
 //        Scanner s1= new Scanner(System.in);
 //        k=s1.nextInt();
 //        int i= b.getNth(head,k);
 //        System.out.println("Data:" + i);
-        
-       head=b.iterative_reverse(head);
+          
+//       head=b.iterative_reverse(head);
 //       b.delDupes(head);
 //       boolean m=b.isPalindrome(head);
 //       System.out.println("The Linked list is a Palindrome: " + m);

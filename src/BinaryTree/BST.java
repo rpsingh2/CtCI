@@ -83,19 +83,16 @@ public class BST {
     public boolean search(Node root, int a){
         if(root!=null){
             Node current=root;
-            if(current.a==a){
-                return true;
+            while(current!=null){
+                if(current.a==a){
+                    return true;
+                }
+                else if(current.a > a)
+                    current=current.leftChild;
+                else
+                    current=current.rightChild;
             }
-            else if(current.a > a){
-                current=current.leftChild;
-               return search(current,a);
-            }
-            else{
-               current=current.rightChild;
-               return search(current,a);
-            }
-   
-    } 
+        } 
     return false;
     }
     
@@ -196,8 +193,7 @@ public class BST {
             Scanner s1= new Scanner(System.in);
             b.addNode(s1.nextInt());
 
-    }
-        
+    }      
         b.inOrder(root);
         b.preOrder(root);
         b.postOrder(root);
